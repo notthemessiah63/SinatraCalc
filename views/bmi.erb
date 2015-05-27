@@ -1,10 +1,20 @@
 <form action="/bmi" method="get">
-  <label for="height">Enter your height</label>
+  <label for="units">Enter 1) metric 2) imperial</label>
+  <input type="text" name="units" placeholder ="enter units">
+  <% if @units == 2 %>
+    <label for="height">Enter your height in inches</label>
+  <% else %>
+    <label for="height">Enter your height in metres</label>    
+  <% end %>
   <input type="text" name="height" placeholder ="enter your height">
-  <label for="weight">Enter your weight</label>
+  <% if @units == 2 %>
+    <label for="weight">Enter your weight in lbs</label>
+  <% else %>
+    <label for="weight">Enter your weight in kgs</label>  
+  <% end %>
   <input type="text" name="weight" placeholder ="enter your weight">
   <input type="submit">
 </form>
 <% if @result %>
-<p>your BMI is <%= @result %></p>
+  <p>your BMI is <%= @result %></p>
 <% end %>

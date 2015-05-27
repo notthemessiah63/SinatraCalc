@@ -28,10 +28,23 @@ get '/sqrt' do
   erb :sqrt
 end
 get '/bmi' do 
+  @units = params[:units].to_i
   @weight = params[:weight].to_f
+  multiplier = 1
   if @weight > 0.0
     @height = params[:height].to_f
-    @result = (@weight/(@height*@height))
+    # -------------------
+    if @units == 2
+      w_suff = "lbs : " 
+      h_suff = "inches : "
+      multipier = 703
+    else
+      w_suff = "kgs : "
+      h_suff = "metres : "
+      multipier = 1
+    end
+    @result = (@weight/(@height*@height))*multiplier
+    # -------------------
   end
   erb :bmi
 end
