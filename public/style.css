@@ -1,0 +1,33 @@
+body {
+  margin: 5%;
+  background-color: #6E94A3;
+}
+form {
+  font-size: 24px;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding:2%;
+}
+input {
+  height: 24px;
+  margin: 0.5%;
+  vertical-align: center;
+}
+a {
+  color: white;
+  font-family: arial;
+}
+label {
+  color: yellow;
+  font-family: arial;
+}
+li {
+  display: inline-block;
+  margin:1%;
+  padding:1%;
+  color:white;
+  background:#6E94A3;
+  font-size: 28px;
+  border: 2px solid white;
+  border-radius: 30px;
+}

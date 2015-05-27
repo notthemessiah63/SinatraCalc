@@ -1,0 +1,9 @@
+<form action="/sqrt" method="get">
+  <label for="sqrt">Enter Number</label>
+  <input type="text" name="sqrt" placeholder ="Enter the number for sqrt">
+  <input type="submit">
+</form>
+<!-- if does not need to be displayed, therefore no equals required before it -->
+<% if @result%>
+<p>The Square Root of <%= @sqrt %>  is <%= @result %></p>
+<% end %>
